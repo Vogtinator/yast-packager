@@ -39,6 +39,8 @@ module Y2Packager
 
         return :auto unless available_license?
 
+        log.info "Displaying license for product: #{product.inspect}"
+
         Y2Packager::Dialogs::InstProductLicense.new(product).run
       end
 
